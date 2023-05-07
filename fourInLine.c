@@ -72,12 +72,12 @@ int main()
     while((resVictory == false) && (resTie == false))
     {
         printf("\nplayer number 1:\n");
-        printf("Please enter column input (a number between 1-7):");
+        printf("Please enter column input (a number between 1-7):\n");
         scanf("%d", &col);
         while ((col > 7) || (col < 1))
         {
             printf("The col you entered is not between 1-7.\n");
-            printf("Please enter column input(a number between 1 - 7) :");
+            printf("Please enter column input(a number between 1 - 7) :\n");
             scanf("%d", &col);
         }
 
@@ -85,7 +85,7 @@ int main()
         while (resFull == -1)
         {
             printf("The col you entered is full.\n");
-            printf("Please enter column input (a number between 1-7):");
+            printf("Please enter column input (a number between 1-7):\n");
             scanf("%d", &col);
             resFull = IsFull(col);
         }
@@ -99,25 +99,25 @@ int main()
 
             if(IsThereAVictory(player1))
             {
-                printf("\nplayer number 1 won!:)");
+                printf("\nplayer number 1 won!:)\n");
                 resVictory = true;
             }
 
             else if(IsThereATie())
             {
-                printf("\nthere's a tie!");
+                printf("\nthere's a tie!\n");
                 resTie = true;
             }
 
             else
             {
                 printf("\nplayer number 2:\n");
-                printf("Please enter column input (a number between 1-7):");
+                printf("Please enter column input (a number between 1-7):\n");
                 scanf("%d", &col);
                 while ((col > 7) || (col < 1))
                 {
                     printf("The col you entered is not between 1-7.\n");
-                    printf("Please enter column input(a number between 1 - 7) :");
+                    printf("Please enter column input(a number between 1 - 7) :\n");
                     scanf("%d", &col);
                 }
 
@@ -126,7 +126,7 @@ int main()
                 while (resFull2 == -1)
                 {
                     printf("The col you entered is full.\n");
-                    printf("Please enter column input (a number between 1-7):");
+                    printf("Please enter column input (a number between 1-7):\n");
                     scanf("%d", &col);
                     resFull2 = IsFull(col);
                 }
@@ -137,12 +137,12 @@ int main()
                     PrintBoard();
                     if(IsThereAVictory(player2))
                     {
-                        printf("\nplayer number 2 won!:)");
+                        printf("\nplayer number 2 won!:)\n");
                         resVictory = true;
                     }
                     else if(IsThereATie())
                     {
-                        printf("\nthere's a tie!");
+                        printf("\nthere's a tie!\n");
                         resTie = true;
                     }
                 }
